@@ -1,6 +1,6 @@
 # ReceiptFox Privacy Policy
 
-**Effective date:** December 28, 2025
+**Effective date:** January 28, 2026
 
 ReceiptFox stores your receipt data on your device by default. This Privacy Policy explains how **ReceiptFox** (“the App”) handles information when you use it.
 
