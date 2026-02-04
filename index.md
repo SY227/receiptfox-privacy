@@ -111,7 +111,7 @@ ReceiptFox uses Apple’s standard app sandboxing. Data is stored in the app’s
 ---
 
 ## Children’s privacy
-ReceiptFox is not directed to children under 13.
+ReceiptFox is intended for a general audience and does not knowingly collect personal information from children under 13. If you believe a child has provided personal information through the App, contact us and we will take appropriate steps consistent with applicable law.
 
 ---
 
@@ -121,4 +121,4 @@ We may update this Privacy Policy from time to time. The “Effective date” ab
 ---
 
 ## Contact
-For questions or requests, contact: **Simon.Yam227@gmail.com**
+For questions or requests, contact: **Simon Yam — Simon.Yam227@gmail.com**
