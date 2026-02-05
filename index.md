@@ -57,7 +57,7 @@ to **Google Gemini** via Firebase AI Logic, and receives structured JSON results
 
 ReceiptFox shares data only in these situations:
 
-1) **Apple iCloud / CloudKit (optional):** If you use iCloud features, your receipts (and receipt images as CloudKit assets) are stored and processed by Apple to provide sync and sharing.  
+1) **Apple iCloud / CloudKit (optional):** If you use iCloud features, your receipt records are stored and processed by Apple to provide sync and sharing, and receipt images **may** be stored as CloudKit assets depending on sync behavior.  
 2) **Google Gemini (receipt extraction):** If you scan/import a receipt for extraction, the receipt image and prompt are transmitted to Google Gemini via Firebase AI Logic.  
 3) **User‑initiated export/share:** When you export and share files, ReceiptFox uses Apple’s Share Sheet to share content to the destination you choose.
 
@@ -91,7 +91,7 @@ ReceiptFox cannot directly delete data retained by Apple, Google, or other desti
 - You can stop camera usage by denying **Camera** permission in iOS Settings.
 - You can stop photo importing by denying **Photos** permission in iOS Settings.
 - You can stop iCloud sync/sharing by signing out of iCloud or disabling iCloud for ReceiptFox in iOS Settings.
-- You can avoid AI receipt extraction by not scanning/importing receipts for extraction.
+- You can avoid AI receipt extraction by not using AI extraction features (you can still store receipts and edit fields manually).
 
 **Request deletion**
 - You can delete receipts in‑app at any time.
