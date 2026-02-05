@@ -1,6 +1,6 @@
 # ReceiptFox Privacy Policy
 
-**Effective date:** February 03, 2026
+**Effective date:** February 04, 2026
 
 ReceiptFox stores your receipts locally on your device by default, and can optionally sync and share folders using Apple iCloud/CloudKit. This Privacy Policy explains how **ReceiptFox** (“the App”) handles information when you use it.
 
@@ -13,7 +13,7 @@ If you have questions, contact: **Simon Yam — Simon.Yam227@gmail.com**
 - ReceiptFox lets you **snap** a receipt with the camera or **import** one from Photos, then extracts key fields to build your receipt history.
 - Receipt images are saved to the app’s private Documents storage (for example: `Documents/ReceiptFoxImages`).
 - iCloud is optional. If you sign into iCloud, ReceiptFox can sync receipts and enable shared folders using **Apple CloudKit**.
-- When you scan/import a receipt for extraction, ReceiptFox sends the receipt **image** and a **prompt** to **Google Gemini** (via Firebase AI Logic) to return structured results.
+- When you use receipt **AI extraction**, ReceiptFox sends the receipt **image** and a **prompt** to **Google Gemini** (via **Firebase AI Logic**) to return structured results.
 - ReceiptFox does **not** sell your data and does **not** use ad tracking.
 
 ---
@@ -45,11 +45,13 @@ If you are signed into iCloud, ReceiptFox can:
 If you are not signed into iCloud, ReceiptFox will keep your receipt vault on this device.
 
 ### 5) AI receipt extraction (Google Gemini via Firebase AI Logic)
-When you scan/import a receipt for extraction, ReceiptFox sends:
+When you choose to run receipt AI extraction (for example by tapping **Scan/Import** to extract fields), ReceiptFox sends:
 - The receipt **image**
 - A **text prompt** instructing the model how to extract fields
 
-to **Google Gemini** via Firebase AI Logic, and receives structured JSON results.
+to **Google Gemini** via **Firebase AI Logic**, and receives structured JSON results.
+
+**AI monitoring logs (Firebase AI Logic):** If AI monitoring is enabled in Firebase for your project, prompts and outputs **may be logged** in **Google Cloud Logging** according to your Firebase AI Logic monitoring settings.
 
 ---
 
@@ -58,10 +60,10 @@ to **Google Gemini** via Firebase AI Logic, and receives structured JSON results
 ReceiptFox shares data only in these situations:
 
 1) **Apple iCloud / CloudKit (optional):** If you use iCloud features, your receipt records are stored and processed by Apple to provide sync and sharing, and receipt images **may** be stored as CloudKit assets depending on sync behavior.  
-2) **Google Gemini (receipt extraction):** If you scan/import a receipt for extraction, the receipt image and prompt are transmitted to Google Gemini via Firebase AI Logic.  
+2) **Google Gemini via Firebase AI Logic (receipt extraction):** If you run receipt AI extraction, the receipt image and prompt are transmitted to Google Gemini via Firebase AI Logic, and the model returns extracted fields.  
 3) **User‑initiated export/share:** When you export and share files, ReceiptFox uses Apple’s Share Sheet to share content to the destination you choose.
 
-**Third‑party protections:** Any third party that processes user data for ReceiptFox (such as Apple CloudKit/iCloud or Google Gemini through Firebase AI Logic) is expected to provide the same or equal protection of user data as stated in this policy and as required by Apple’s App Review Guidelines. ReceiptFox uses these services only to deliver the requested app functionality.
+**Third‑party protections:** Any third party that processes user data for ReceiptFox (such as Apple CloudKit/iCloud, Google Gemini, or Firebase AI Logic services) is expected to provide the same or equal protection of user data as stated in this policy and as required by Apple’s App Review Guidelines. ReceiptFox uses these services only to deliver the requested app functionality.
 
 ReceiptFox does **not** sell your data. ReceiptFox does **not** share data with advertisers. ReceiptFox does **not** perform cross‑app tracking.
 
@@ -74,12 +76,13 @@ ReceiptFox does **not** sell your data. ReceiptFox does **not** share data with 
 - **Deleting in the app:** Deleting a receipt removes it from local storage; if iCloud sync is enabled, the associated CloudKit record is also deleted from the selected CloudKit database (subject to Apple services).
 - **Deleting the app:** Removing the app removes locally stored app data on your device.
 
-### Third‑party retention (Apple / Google / share destinations)
+### Third‑party retention (Apple / Google / logging / share destinations)
 - **Apple CloudKit/iCloud:** If iCloud features are used, Apple may process and retain synced content according to Apple’s policies.
-- **Google Gemini:** When you use receipt extraction, the content you submit and the model output may be processed and retained according to Google’s Gemini policies. Google’s Gemini API documentation states prompts and outputs may be retained for up to **55 days** for abuse monitoring.
+- **Google Gemini:** When you use AI extraction, the content you submit and the model output may be processed and retained according to Google’s Gemini policies. Google may retain prompts/outputs for up to **55 days** for abuse monitoring, **depending on service tier and configuration**.
+- **Firebase AI monitoring logs (optional):** If enabled, prompts/outputs may be logged in Google Cloud Logging per your Firebase AI Logic monitoring settings.
 - **Share destinations:** If you export/share files, the destination app or service (email provider, messaging app, cloud drive, etc.) may retain the shared file under their policies.
 
-ReceiptFox cannot directly delete data retained by Apple, Google, or other destinations outside the app. Please refer to their policies for retention and deletion options:
+ReceiptFox cannot directly delete data retained by Apple, Google, Google Cloud Logging (if enabled), or other destinations outside the app. Please refer to their policies for retention and deletion options:
 - Apple: https://www.apple.com/legal/privacy/
 - Google: https://policies.google.com/privacy
 
@@ -96,7 +99,7 @@ ReceiptFox cannot directly delete data retained by Apple, Google, or other desti
 **Request deletion**
 - You can delete receipts in‑app at any time.
 - Deleting the app removes locally stored data from your device.
-- For data retained by Apple (CloudKit/iCloud), Google (Gemini), or any export/share destinations, deletion requests are governed by their policies (links above).
+- For data retained by Apple (CloudKit/iCloud), Google (Gemini), Google Cloud Logging (if enabled), or any export/share destinations, deletion requests are governed by their policies (links above).
 
 ---
 
